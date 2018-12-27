@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
@@ -45,8 +46,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initLineChart(LineChart lineChart) {
-//        lineChart.getXAxis().setDrawAxisLine(true);
-//        lineChart.getXAxis().setDrawGridLines(false);
+        //设置XAxis应显示的位置。选择TOP，BOTTOM，BOTH_SIDED，TOP_INSIDE或BOTTOM_INSIDE。
+        lineChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM_INSIDE);
+
+        //如果应绘制沿轴（轴线）的线，则将此设置为true。
+        lineChart.getXAxis().setDrawAxisLine(true);
+        //如果应绘制沿轴（轴线）的线，则将此设置为true。
+        lineChart.getXAxis().setDrawGridLines(false);
+
     }
 
     // 设置chart显示的样式
